@@ -10,8 +10,8 @@ export default function Weather() {
               <div className="row">
                 <div className="col-md-5">
                   <div className="maintemperature">
-                    <h2 className="d-inline text-center">XX° </h2>{" "}
-                    <span className="d-inline text-center"> C | F</span>
+                    <span className="mainT">XX° </span>{" "}
+                    <span className="mainunit"> C | F</span>
                   </div>
                 </div>
                 <div className="col-md-7 iconbox">
@@ -30,7 +30,7 @@ export default function Weather() {
               </div>
             </div>
             <div className="col-md-6 citybox">
-              <div className="row cityname">
+              <div className="row">
                 <h1>City </h1>
               </div>
               <div className="row">
