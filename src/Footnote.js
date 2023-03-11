@@ -1,8 +1,9 @@
 import React from "react";
+import "./Footnote.css";
 
-export default function Footer() {
+export default function Footnote() {
   return (
-    <footer>
+    <small className="Footnote">
       <a
         href="https://github.com/MarydeR/monominiweatherapp"
         target="_blank"
@@ -18,6 +19,6 @@ export default function Footer() {
       >
         Netlify
       </a>{" "}
-    </footer>
+    </small>
   );
 }

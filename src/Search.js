@@ -2,20 +2,27 @@ import React, { useState } from "react";
 import axios from "axios";
 import Weather from "./Weather.js";
 import { Commet } from "react-loading-indicators";
-import Footer from "./Footer.js";
 import "./Search.css";
 
-export default function Search() {
-  function getTemperature(response) {}
-  let defaultcity = "Manila";
-  let [city, setCity] = useState(defaultcity);
+export default function Search(props) {
   const [loaded, setLoaded] = useState(false);
-
+  const [weatherdata, setWeatherdata] = useState({});
+  function getTemperature(response) {
+    setWeatherdata({
+      city: response.data.city,
+      temperature: Math.round(response.data.temperature.current),
+      description: response.data.condition.description,
+      humidity: Math.round(response.data.temperature.humidity),
+      wind: Math.round(response.data.wind.speed),
+      icon_url: response.data.condition.icon_url,
+    });
+    setLoaded(true);
+  }
   if (loaded) {
     return (
       <div className="Search">
         <div className="mainsection border border-2 rounded-4">
-          <Weather />
+          <Weather data={weatherdata} />
           <div className="row">
             <form className="row">
               <div className="col-9">
@@ -34,23 +41,18 @@ export default function Search() {
             </form>
           </div>
         </div>
-        <Footer />
       </div>
     );
   } else {
-    let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=2ec340bdbdo84acaf6ct2a055b44668d&units=metric`;
+    let apiURL = `https://api.shecodes.io/weather/v1/current?query=${props.defaultcity}&key=2ec340bdbdo84acaf6ct2a055b44668d&units=metric`;
     axios.get(apiURL).then(getTemperature);
-
     return (
-      <div>
-        <div className="Search">
-          <div className="mainsection border border-2 rounded-4">
-            <div>
-              <Commet color="#a4a4a4" size="medium" text="" textColor="" />
-            </div>
+      <div className="Search">
+        <div className="mainsection border border-2 rounded-4">
+          <div>
+            <Commet color="#a4a4a4" size="medium" text="" textColor="" />
           </div>
-          <Footer />
-        </div>{" "}
+        </div>
       </div>
     );
   }
