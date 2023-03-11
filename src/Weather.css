@@ -1,0 +1,10 @@
+.Weather {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.Weather h1 {
+  color: red;
+}
+
+.Weather footer a {
+  color: #383838;
+}

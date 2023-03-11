@@ -7,7 +7,6 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <header className="App-header">Hello MonoMini Weather App</header>
         <Weather />
       </div>
     </div>

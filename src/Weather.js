@@ -1,11 +1,19 @@
 import React from "react";
 import "./Weather.css";
-function WeatherApp() {
+export default function Weather() {
   return (
-    <div className="WeatherApp">
-      <h1>Weather APP</h1>
+    <div className="Weather">
+      <div className="sectionA"></div>
+      <footer>
+        <a
+          href="https://github.com/MarydeR/monominiweatherapp"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          OpenSource
+        </a>{" "}
+        by MDR
+      </footer>
     </div>
   );
 }
-
-export default WeatherApp;
