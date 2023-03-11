@@ -1,8 +1,3 @@
-.Weather {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  max-width: 700px;
-  margin: 50px auto;
-}
 .Weather .maintemperature {
   margin: 20px auto;
 }
@@ -30,14 +25,6 @@
   top: -20px;
 }
 
-.Weather footer a {
-  color: #5c5c5c;
-}
-
-.Weather .mainsection {
-  padding: 20px;
-}
-
 .Weather .iconbox {
   padding: 0;
 }
@@ -45,4 +32,8 @@
 li {
   list-style: none;
   color: #5c5c5c;
+}
+
+.Weather .firstlist {
+  font-size: 25px;
 }

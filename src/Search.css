@@ -1,0 +1,19 @@
+.Search {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  max-width: 600px;
+  padding: 20px;
+  margin: 50px auto;
+}
+
+.Search .mainsection {
+  padding: 20px 40px;
+}
+.Search form {
+  margin: 0 auto;
+}
+.Search footer {
+  padding: 5px;
+}
+.Search footer a {
+  color: #5c5c5c;
+}
