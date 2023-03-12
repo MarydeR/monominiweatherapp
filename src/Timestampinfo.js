@@ -36,7 +36,7 @@ export default function Timestampinfo(props) {
   let sentencedate = `${date} ${month}, ${year}`;
   let sentencetime = `${hour}:${min}`;
   return (
-    <ul>
+    <ul className="Timestampinfo">
       <li className="firstlist">{sentencedate}</li>
       <li>{weekdays[day]}</li>
       <li>local time: {sentencetime}</li>

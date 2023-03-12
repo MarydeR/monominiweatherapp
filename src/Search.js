@@ -7,6 +7,7 @@ import "./Search.css";
 export default function Search(props) {
   const [loaded, setLoaded] = useState(false);
   const [weatherdata, setWeatherdata] = useState({});
+  const [city, setCity] = useState(props.defaultcity);
   function getTemperature(response) {
     setWeatherdata({
       city: response.data.city,
@@ -19,19 +20,28 @@ export default function Search(props) {
     });
     setLoaded(true);
   }
+
+  function handlesubmit(event) {
+    event.preventDefault();
+    //set
+  }
+  function citychange(event) {
+    setCity(event.target.value);
+  }
   if (loaded) {
     return (
       <div className="Search">
         <div className="mainsection border border-2 rounded-4">
           <Weather data={weatherdata} />
           <div className="row">
-            <form className="row">
+            <form className="row" onSubmit={handlesubmit}>
               <div className="col-9">
                 <input
                   type="text"
                   className="form-control"
                   placeholder="Enter City"
                   autocomplete="off"
+                  onChange={citychange}
                 />
               </div>
               <div className="col">
@@ -45,7 +55,7 @@ export default function Search(props) {
       </div>
     );
   } else {
-    let apiURL = `https://api.shecodes.io/weather/v1/current?query=${props.defaultcity}&key=2ec340bdbdo84acaf6ct2a055b44668d&units=metric`;
+    let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=2ec340bdbdo84acaf6ct2a055b44668d&units=metric`;
     axios.get(apiURL).then(getTemperature);
     return (
       <div className="Search">

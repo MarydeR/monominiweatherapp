@@ -28,10 +28,10 @@
 .Weather .iconbox {
   padding: 0;
 }
-.Weather .sectionA ul,
-li {
+.Weather .weatherdescription {
   list-style: none;
   color: #5c5c5c;
+  text-align: left;
 }
 
 .Weather .firstlist {

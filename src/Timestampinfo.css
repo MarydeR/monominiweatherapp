@@ -1,8 +1,8 @@
-.Timestamp .firstlist {
+.Timestampinfo .firstlist {
   font-size: 25px;
 }
-.Timestamp ul,
-li {
+.Timestampinfo {
   list-style: none;
   color: #5c5c5c;
+  text-align: right;
 }

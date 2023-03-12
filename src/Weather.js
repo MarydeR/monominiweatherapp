@@ -28,8 +28,8 @@ export default function Weather(props) {
           <div className="row">
             <div className="col">
               {" "}
-              <div className="row weatherdescription">
-                <ul>
+              <div className="row">
+                <ul className="weatherdescription">
                   <li className="firstlist text-capitalize">
                     {" "}
                     {props.data.description}
