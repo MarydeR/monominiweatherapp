@@ -14,6 +14,7 @@ export default function Search(props) {
       description: response.data.condition.description,
       humidity: Math.round(response.data.temperature.humidity),
       wind: Math.round(response.data.wind.speed),
+      timestamp: response.data.time,
       icon_url: response.data.condition.icon_url,
     });
     setLoaded(true);

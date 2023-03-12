@@ -1,4 +1,5 @@
 import React from "react";
+import Timestampinfo from "./Timestampinfo.js";
 import "./Weather.css";
 export default function Weather(props) {
   return (
@@ -37,11 +38,7 @@ export default function Weather(props) {
                 <h1>{props.data.city}</h1>
               </div>
               <div className="row">
-                <ul>
-                  <li className="firstlist">Date</li>
-                  <li>day</li>
-                  <li>local time: hh:mm</li>
-                </ul>
+                <Timestampinfo timestamp={props.data.timestamp} />
               </div>
             </div>
           </div>
