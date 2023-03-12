@@ -4,3 +4,7 @@
 .Displaytemperature .mainunit a {
   color: #5c5c5c;
 }
+.Displaytemperature strong {
+  color: #000000;
+  font-size: 20px;
+}
