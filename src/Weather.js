@@ -1,6 +1,6 @@
 import React from "react";
 import Timestampinfo from "./Timestampinfo.js";
-import Weathericon from "./Weathericon.js";
+
 import Displaytemperature from "./Displaytemperature.js";
 import "./Weather.css";
 export default function Weather(props) {
