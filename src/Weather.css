@@ -37,3 +37,17 @@ li {
 .Weather .firstlist {
   font-size: 25px;
 }
+
+@media (max-width: 500px) {
+  .Weather h1,
+  .Weather .mainT {
+    font-size: 25px;
+  }
+  .Weather img {
+    max-width: 60px;
+  }
+  .Weather .firstlist,
+  .Weather .sectionA li {
+    font-size: 15px;
+  }
+}

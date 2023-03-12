@@ -7,21 +7,27 @@ export default function Weather(props) {
       <div>
         <div className="section1">
           <div className="row">
-            <div className="col-md-8">
-              <div className="row">
-                <div className="col-md">
-                  <div className="maintemperature">
-                    <span className="mainT">{props.data.temperature}° </span>{" "}
-                    <span className="mainunit"> C | F</span>
-                  </div>
-                </div>
-                <div className="col-md iconbox">
-                  <img
-                    src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
-                    alt="weatherIcon"
-                  ></img>
-                </div>
+            <div className="col">
+              <div className="maintemperature d-inline-block">
+                <span className="mainT">{props.data.temperature}° </span>{" "}
+                <span className="mainunit"> C | F</span>
               </div>
+
+              <div className="iconbox  d-inline-block">
+                <img
+                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
+                  alt="weatherIcon"
+                ></img>
+              </div>
+            </div>
+            <div className="col citybox">
+              <h1>{props.data.city}</h1>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col">
+              {" "}
               <div className="row weatherdescription">
                 <ul>
                   <li className="firstlist text-capitalize">
@@ -33,13 +39,8 @@ export default function Weather(props) {
                 </ul>
               </div>
             </div>
-            <div className="col-md-4 citybox">
-              <div className="row">
-                <h1>{props.data.city}</h1>
-              </div>
-              <div className="row">
-                <Timestampinfo timestamp={props.data.timestamp} />
-              </div>
+            <div className="col">
+              <Timestampinfo timestamp={props.data.timestamp} />
             </div>
           </div>
         </div>
