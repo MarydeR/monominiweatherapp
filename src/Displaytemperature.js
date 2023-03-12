@@ -22,7 +22,7 @@ export default function Displaytemperature(props) {
           <span className="mainunit">
             {" "}
             <strong> C | </strong>
-            <a href="#" onClick={convertF}>
+            <a href="/" onClick={convertF}>
               F{" "}
             </a>
           </span>
@@ -37,7 +37,7 @@ export default function Displaytemperature(props) {
           <span className="mainT">{Ftemperature}° </span>{" "}
           <span className="mainunit">
             {" "}
-            <a href="#" onClick={convertC}>
+            <a href="/" onClick={convertC}>
               C{" "}
             </a>{" "}
             | <strong>F</strong>
