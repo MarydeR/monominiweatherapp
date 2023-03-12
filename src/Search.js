@@ -17,13 +17,18 @@ export default function Search(props) {
       wind: Math.round(response.data.wind.speed),
       timestamp: response.data.time,
       icon_url: response.data.condition.icon_url,
+      icon: response.data.condition.icon,
     });
     setLoaded(true);
+  }
+  function search() {
+    let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=2ec340bdbdo84acaf6ct2a055b44668d&units=metric`;
+    axios.get(apiURL).then(getTemperature);
   }
 
   function handlesubmit(event) {
     event.preventDefault();
-    //set
+    search();
   }
   function citychange(event) {
     setCity(event.target.value);
@@ -40,7 +45,7 @@ export default function Search(props) {
                   type="text"
                   className="form-control"
                   placeholder="Enter City"
-                  autocomplete="off"
+                  autoComplete="off"
                   onChange={citychange}
                 />
               </div>
@@ -55,8 +60,7 @@ export default function Search(props) {
       </div>
     );
   } else {
-    let apiURL = `https://api.shecodes.io/weather/v1/current?query=${city}&key=2ec340bdbdo84acaf6ct2a055b44668d&units=metric`;
-    axios.get(apiURL).then(getTemperature);
+    search();
     return (
       <div className="Search">
         <div className="mainsection border border-2 rounded-4">

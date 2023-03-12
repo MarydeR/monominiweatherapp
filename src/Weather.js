@@ -1,5 +1,6 @@
 import React from "react";
 import Timestampinfo from "./Timestampinfo.js";
+import Weathericon from "./Weathericon.js";
 import "./Weather.css";
 export default function Weather(props) {
   return (
@@ -14,10 +15,7 @@ export default function Weather(props) {
               </div>
 
               <div className="iconbox  d-inline-block">
-                <img
-                  src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
-                  alt="weatherIcon"
-                ></img>
+                <img src={props.data.icon_url} alt={props.data.icon} />
               </div>
             </div>
             <div className="col citybox">
@@ -48,3 +46,5 @@ export default function Weather(props) {
     </div>
   );
 }
+
+// alternative in line18       <Weathericon icon={props.data.icon} />
