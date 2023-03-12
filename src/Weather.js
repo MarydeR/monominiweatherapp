@@ -44,5 +44,3 @@ export default function Weather(props) {
     </div>
   );
 }
-
-// alternative in line18        <Weathericon icon={props.data.icon} />
