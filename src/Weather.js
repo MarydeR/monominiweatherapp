@@ -1,6 +1,7 @@
 import React from "react";
 import Timestampinfo from "./Timestampinfo.js";
 import Weathericon from "./Weathericon.js";
+import Displaytemperature from "./Displaytemperature.js";
 import "./Weather.css";
 export default function Weather(props) {
   return (
@@ -9,10 +10,7 @@ export default function Weather(props) {
         <div className="section1">
           <div className="row">
             <div className="col">
-              <div className="maintemperature d-inline-block">
-                <span className="mainT">{props.data.temperature}° </span>{" "}
-                <span className="mainunit"> C | F</span>
-              </div>
+              <Displaytemperature temperature={props.data.temperature} />
 
               <div className="iconbox  d-inline-block">
                 <img src={props.data.icon_url} alt={props.data.icon} />
@@ -47,4 +45,4 @@ export default function Weather(props) {
   );
 }
 
-// alternative in line18       <Weathericon icon={props.data.icon} />
+// alternative in line18        <Weathericon icon={props.data.icon} />

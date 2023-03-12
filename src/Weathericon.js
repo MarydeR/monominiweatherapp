@@ -23,7 +23,6 @@ export default function Weathericon(props) {
     "mist-day": "FOG",
     "mist-night": "FOG",
   };
-  console.log(iconmapping[props.icon]);
   return (
     <div className="Weathericon">
       <ReactAnimatedWeather

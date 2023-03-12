@@ -1,0 +1,6 @@
+.Displaytemperature {
+  display: inline;
+}
+.Displaytemperature .mainunit a {
+  color: #5c5c5c;
+}
