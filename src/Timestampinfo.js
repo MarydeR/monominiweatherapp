@@ -7,7 +7,7 @@ export default function Timestampinfo(props) {
     "Sunday",
     "Monday",
     "Tuesday",
-    "Wednes",
+    "Wednesday",
     "Thursday",
     "Friday",
     "Saturday",
