@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Weather from "./Weather.js";
+import Forecast from "./Forecast.js";
 import { Commet } from "react-loading-indicators";
 import "./Search.css";
 
@@ -18,6 +19,7 @@ export default function Search(props) {
       timestamp: response.data.time,
       icon_url: response.data.condition.icon_url,
       icon: response.data.condition.icon,
+      coordinates: response.data.coordinates,
     });
     setLoaded(true);
   }
@@ -38,6 +40,7 @@ export default function Search(props) {
       <div className="Search">
         <div className="mainsection border border-2 rounded-4">
           <Weather data={weatherdata} />
+          <Forecast coordinates={weatherdata.coordinates} />
           <div className="row">
             <form className="row" onSubmit={handlesubmit}>
               <div className="col-9">
