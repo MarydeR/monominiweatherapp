@@ -66,8 +66,8 @@ export default function Search(props) {
     search();
     return (
       <div className="Search">
-        <div className="mainsection border border-2 rounded-4">
-          <div>
+        <div className="mainsection">
+          <div className="position-absolute top-0 start-50 translate-middle-x">
             <Commet color="#a4a4a4" size="medium" text="" textColor="" />
           </div>
         </div>

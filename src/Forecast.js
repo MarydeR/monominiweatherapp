@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import axios from "axios";
 import ForecastDay from "./ForecastDay.js";
-import { Commet } from "react-loading-indicators";
+import { Seek } from "react-loading-indicators";
 
 import "./Forecast.css";
 
@@ -47,7 +47,7 @@ export default function Forecast(props) {
 
     return (
       <div>
-        <Commet color="#a4a4a4" size="medium" text="" textColor="" />
+        <Seek color="#a4a4a4" size="medium" text="" textColor="" />
       </div>
     );
   }
