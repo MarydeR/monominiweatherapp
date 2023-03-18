@@ -39,7 +39,7 @@ export default function Timestampinfo(props) {
     <ul className="Timestampinfo">
       <li className="firstlist">{sentencedate}</li>
       <li>{weekdays[day]}</li>
-      <li>local time: {sentencetime}</li>
+      <li>local time {sentencetime}</li>
     </ul>
   );
 }
