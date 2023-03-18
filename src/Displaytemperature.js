@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import "./Displaytemperature.css";
 
 export default function Displaytemperature(props) {
