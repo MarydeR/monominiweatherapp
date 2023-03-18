@@ -1,0 +1,18 @@
+.ForecasDay {
+  color: #383838;
+}
+.ForecasDay .Forecastweekday {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.ForecasDay .mintemp {
+  opacity: 70%;
+}
+.ForecasDay .maxtemp {
+  font-weight: bolder;
+}
+
+.ForecasDay img {
+  width: 90px;
+}

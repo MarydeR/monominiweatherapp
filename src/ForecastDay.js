@@ -1,5 +1,5 @@
 import React from "react";
-import "./Forecast.css";
+import "./ForecastDay.css";
 
 export default function ForecastDay(props) {
   let fulldate = new Date(props.data.time * 1000);
@@ -19,8 +19,8 @@ export default function ForecastDay(props) {
       </div>
       <div>
         {" "}
-        <span className="mintemp"> {max}°</span>{" "}
-        <span className="maxtemp"> {min}°</span>
+        <span className="mintemp"> {min}°</span>{" "}
+        <span className="maxtemp"> {max}°</span>
       </div>
     </div>
   );

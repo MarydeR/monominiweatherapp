@@ -1,3 +1,7 @@
 .Forecast {
   text-align: center;
+  margin: 20px;
+  padding: 10px;
+  border-top: solid 3px #aeaeae;
+  border-bottom: solid 3px #aeaeae;
 }
