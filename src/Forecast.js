@@ -1,19 +1,30 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
+import ForecastDay from "./ForecastDay.js";
 import { Commet } from "react-loading-indicators";
 
 import "./Forecast.css";
 
 export default function Forecast(props) {
   const [loaded, setLoaded] = useState(false);
+  let [forecast, setForecast] = useState(null);
   function getForecast(response) {
     setLoaded(true);
-    console.log(response.data);
+    console.log(response.data.daily);
+    setForecast(response.data.daily);
   }
 
   if (loaded) {
-    return <div className="Forecast">Hello</div>;
+    return (
+      <div className="Forecast">
+        <div className="row">
+          <div className="col" key="index">
+            <ForecastDay data={forecast[1]} />
+          </div>
+        </div>
+      </div>
+    );
   } else {
     let long = props.coordinates.longitude;
     let lat = props.coordinates.latitude;
