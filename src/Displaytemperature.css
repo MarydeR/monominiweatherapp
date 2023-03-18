@@ -6,5 +6,11 @@
 }
 .Displaytemperature strong {
   color: #000000;
-  font-size: 20px;
+  font-size: 25px;
+}
+
+@media (max-width: 500px) {
+  .Displaytemperature .mainT {
+    font-size: 18px;
+  }
 }

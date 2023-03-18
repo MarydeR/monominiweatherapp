@@ -41,7 +41,7 @@ export default function Search(props) {
         <div className="mainsection border border-2 rounded-4">
           <Weather data={weatherdata} />
           <Forecast coordinates={weatherdata.coordinates} />
-          <div className="row">
+          <div className="row pt-3">
             <form className="row" onSubmit={handlesubmit}>
               <div className="col-9">
                 <input

@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { useEffect } from "react";
 import axios from "axios";
 import ForecastDay from "./ForecastDay.js";
 import { Commet } from "react-loading-indicators";
@@ -9,6 +10,11 @@ import "./Forecast.css";
 export default function Forecast(props) {
   const [loaded, setLoaded] = useState(false);
   let [forecast, setForecast] = useState(null);
+
+  useEffect(() => {
+    setLoaded(false);
+  }, [props]);
+
   function getForecast(response) {
     setLoaded(true);
     console.log(response.data.daily);
@@ -19,9 +25,15 @@ export default function Forecast(props) {
     return (
       <div className="Forecast">
         <div className="row">
-          <div className="col" key="index">
-            <ForecastDay data={forecast[1]} />
-          </div>
+          {forecast.map(function (dailyforecast, index) {
+            if (index < 5) {
+              return (
+                <div className="col p-0" key="index">
+                  <ForecastDay data={dailyforecast} />
+                </div>
+              );
+            }
+          })}
         </div>
       </div>
     );
