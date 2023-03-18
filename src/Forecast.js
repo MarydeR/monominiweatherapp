@@ -13,7 +13,7 @@ export default function Forecast(props) {
 
   useEffect(() => {
     setLoaded(false);
-  }, [props]);
+  }, [props.coordinates]);
 
   function getForecast(response) {
     setLoaded(true);
